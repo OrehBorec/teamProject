@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="home.css">
-    <link href="https:/fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-</head>
-<body>
-    
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <title>Continental Palate</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="info-block">
+      <div class="info-block-text">
+        <p>
+          Каждое блюдо — это не просто еда,это произведение искусства созданное
+          для вдохновения.
+        </p>
+      </div>
+    </div>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <img
+          src="./picture/restaurant-11.jpeg"
+          alt="Restaurant Image 1"
+          class="active"
+        />
+        <img src="./picture/restaurant-7.jpg" alt="Restaurant Image 2" />
+        <img src="./picture/restaurant-8.jpeg" alt="Restaurant Image 3" />
+        <img src="./picture/restaurant-9.png" alt="Restaurant Image 4" />
+        <img src="./picture/restaurant-12.jpeg" alt="Restaurant Image 5" />
+      </div>
+
+      <button class="carousel-control prev">&#10094;</button>
+      <button class="carousel-control next">&#10095;</button>
+    </div>
+
+    <script src="home.js"></script>
+  </body>
 </html>
