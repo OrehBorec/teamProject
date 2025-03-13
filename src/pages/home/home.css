@@ -208,6 +208,7 @@ button {
   justify-content: center;
   width: 90vw;
   height: 80vh;
+  overflow: hidden;
   padding: 30px 50px;
 }
 
