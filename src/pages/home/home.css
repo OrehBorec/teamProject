@@ -1,0 +1,29 @@
+body{
+    font-family: Rubik;
+    background-color: black ;
+    background-image: url('/src/images/solid_image.png');
+    background-size: cover ;
+    opacity: 1;
+  }
+  
+  .item{
+    color: rgb(229, 224, 224);
+    font-size: 41px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+  
+  .everest{
+    background: linear-gradient(90deg, #e27719, #A52A2A, #B22222, #D2691E, #FFD700);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  }
+  .containerMenu{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 260px;
+    gap: 20px;
+  }
+  

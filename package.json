@@ -1,0 +1,19 @@
+{
+  "name": "team-project",
+  "version": "1.0.0",
+  "description": "Совместный проект с Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "css-loader": "^6.9.1"
+  },
+  "dependencies": {}
+}
