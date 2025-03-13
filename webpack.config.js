@@ -22,17 +22,18 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "images/[name][ext]",
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].bundle.css", // home.bundle.css, about.bundle.css и т. д.
+      filename: "[name].bundle.css",
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",

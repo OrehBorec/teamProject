@@ -1,6 +1,31 @@
 import "./home.css";
 import krest from "../../images/homeImages/animation/Vector.png";
 import image1 from "../../images/homeImages/picture/restaurant-1.jpg";
+import animation from '../../images/homeImages/animation/Animation - 1741390234585.gif'
+
+import photo1 from '../../images/homeImages/picture/restaurant-1.jpg'
+import photo2 from '../../images/homeImages/picture/restaurant-2.jpg'
+import photo3 from '../../images/homeImages/picture/restaurant-3.jpg'
+import photo4 from '../../images/homeImages/picture/restaurant-4.jpg'
+
+import imgRoomPhoto from '../../images/homeImages/picture/restaurant-5.jpg'
+import imgRoomTwoPhoto from '../../images/homeImages/picture/restaurant-22.jpg'
+
+import eventVideoSrc from '../../images/homeImages/video/857151-hd_1920_746_30fps.mp4'
+
+import imageMenuImgSrc from '../../images/homeImages/picture/meze.png'
+import imageMenuTwoImgSrc from '../../images/homeImages/picture/menu1.png'
+
+import gridItemPhoto1 from '../../images/homeImages/picture/restaurant-23.jpg'
+import gridItemPhoto2 from '../../images/homeImages/picture/restaurant-16.jpg'
+import gridItemPhoto3 from '../../images/homeImages/picture/restaurant-17.png'
+import gridItemPhoto4 from '../../images/homeImages/picture/restaurant-18.png'
+import gridItemPhoto5 from '../../images/homeImages/picture/restaurant-19.png'
+import gridItemPhoto6 from '../../images/homeImages/picture/restaurant-22.jpg'
+
+
+import logoImgPhoto from '../../images/homeImages/picture/logo.jpg'
+
 const app = document.getElementById("app");
 
 const backgroundBlock = document.createElement("div");
@@ -13,9 +38,10 @@ const navbarBrand = document.createElement("a");
 navbarBrand.className = "navbar-brand";
 navbarBrand.href = "#";
 
+
 const animatedButton = document.createElement("img");
 animatedButton.src =
-  "./images/homeImages/animation/Animation - 1741390234585.gif";
+  animation
 animatedButton.alt = "button";
 animatedButton.className = "animated-button";
 
@@ -130,28 +156,29 @@ const imageSlider = document.createElement("div");
 imageSlider.className = "image-slider";
 const img = document.createElement("img");
 img.id = "slidingImage";
-(img.src = image1), (img.alt = "Image Slider");
+img.src = image1
+img.alt = "Image Slider"
 imageSlider.appendChild(img);
 
 main.appendChild(contentBlock2);
 main.appendChild(imageSlider);
 
 app.appendChild(main);
+
 const imagePaths = [
-  "./images/homeImages/picture/restaurant-1.jpg",
-  "./images/homeImages/picture/restaurant-2.jpg",
-  "./images/homeImages/picture/restaurant-3.jpg",
-  "./images/homeImages/picture/restaurant-4.jpg",
+  photo1,
+  photo2,
+  photo3,
+  photo4,
 ];
 
 let currentSlideshowIndex = 0;
-const imageElement = document.getElementById("slidingImage");
 const carouselImages = document.querySelectorAll(".carousel-inner img");
-let currentCarouselIndex = 0;
+carouselImages.forEach((img, index) => {
+  img.src = imagePaths[index]
+})
 
-// Функция смены изображения в слайдере
 const changeSlideshowImage = () => {
-  imageElement.src = imagePaths[currentSlideshowIndex];
   currentSlideshowIndex = (currentSlideshowIndex + 1) % imagePaths.length;
 };
 
@@ -164,14 +191,15 @@ blockRoom.className = "block-room";
 const imageRoom = document.createElement("div");
 imageRoom.className = "image-room";
 
+
 const imgRoom = document.createElement("img");
 imgRoom.id = "slidingImageRoom";
-imgRoom.src = "./images/homeImages/picture/restaurant-5.jpg";
+imgRoom.src = imgRoomPhoto;
 imgRoom.alt = "Image Slider";
 imageRoom.appendChild(imgRoom);
 const imgRoomTwo = document.createElement("img");
 imgRoomTwo.id = "slidingImageRoomTwo";
-imgRoomTwo.src = "./images/homeImages/picture/restaurant-22.jpg";
+imgRoomTwo.src = imgRoomTwoPhoto
 imgRoomTwo.alt = "Image Slider";
 
 imageRoom.appendChild(imgRoomTwo);
@@ -217,6 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   const updateCarousel = () => {
+
     images.forEach((img, index) => {
       img.classList.toggle("active", index === currentIndex);
     });
@@ -290,6 +319,7 @@ eventBlock.appendChild(eventTitle);
 const blockEventButton = document.createElement("div");
 blockEventButton.className = "block-event-button";
 
+
 const eventVideo = document.createElement("video");
 eventVideo.id = "event-video";
 eventVideo.autoplay = true;
@@ -297,7 +327,7 @@ eventVideo.muted = true;
 eventVideo.loop = true;
 
 const videoSource = document.createElement("source");
-videoSource.src = "./images/homeImages/video/857151-hd_1920_746_30fps.mp4";
+videoSource.src = eventVideoSrc;
 videoSource.type = "video/mp4";
 eventVideo.appendChild(videoSource);
 
@@ -366,16 +396,18 @@ menuBlock.appendChild(contentMenu);
 const imageMenu = document.createElement("div");
 imageMenu.className = "image-menu";
 
+
 const imageMenuImg = document.createElement("img");
-imageMenuImg.src = "./images/homeImages/picture/meze.png";
+imageMenuImg.src = imageMenuImgSrc
 imageMenuImg.alt = "Image Menu";
 imageMenu.appendChild(imageMenuImg);
 
 const imageMenuTwo = document.createElement("div");
 imageMenuTwo.className = "image-menu-two";
 
+
 const imageMenuTwoImg = document.createElement("img");
-imageMenuTwoImg.src = "./images/homeImages/picture/menu1.png";
+imageMenuTwoImg.src = imageMenuTwoImgSrc
 imageMenuTwoImg.alt = "Image Menu";
 imageMenuTwo.appendChild(imageMenuTwoImg);
 
@@ -390,32 +422,32 @@ gridContainer.className = "grid-container";
 
 const gridItems = [
   {
-    src: "./images/homeImages/picture/restaurant-23.jpg",
+    src: gridItemPhoto1,
     alt: "Restaurant Image 6",
     className: "grid-item grid-item-large",
   },
   {
-    src: "./images/homeImages/picture/restaurant-16.jpg",
+    src: gridItemPhoto2,
     alt: "Restaurant Image 7",
     className: "grid-item",
   },
   {
-    src: "./images/homeImages/picture/restaurant-17.png",
+    src: gridItemPhoto3,
     alt: "Restaurant Image 8",
     className: "grid-item grid-item-large",
   },
   {
-    src: "./images/homeImages/picture/restaurant-18.png",
+    src: gridItemPhoto4,
     alt: "Restaurant Image 9",
     className: "grid-item",
   },
   {
-    src: "./images/homeImages/picture/restaurant-19.png",
+    src: gridItemPhoto5,
     alt: "Restaurant Image 10",
     className: "grid-item",
   },
   {
-    src: "./images/homeImages/picture/restaurant-22.jpg",
+    src: gridItemPhoto6,
     alt: "Restaurant Image 11",
     className: "grid-item",
   },
@@ -459,8 +491,9 @@ footerContainer.className = "footer-container";
 const footerLogo = document.createElement("div");
 footerLogo.className = "footer-logo";
 
+
 const logoImg = document.createElement("img");
-logoImg.src = "./images/homeImages/picture/logo.jpg";
+logoImg.src = logoImgPhoto
 logoImg.alt = "Логотип ресторана";
 footerLogo.appendChild(logoImg);
 
